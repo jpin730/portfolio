@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css'
 import Hero from '../components/Hero.tsx'
+import Experience from '../components/Experience.astro'
+import TitleSection from '../components/TitleSection.astro'
 ---
 
 <html lang="en">
@@ -12,7 +14,15 @@ import Hero from '../components/Hero.tsx'
   </head>
   <body>
     <main class="min-h-dvh bg-black text-white">
-      <Hero client:load />
+      <section>
+        <Hero client:load />
+      </section>
+      <section class="container mx-auto px-4">
+        <TitleSection> Experience </TitleSection>
+        <p class="mb-8 text-gray-600 dark:text-gray-300">
+          <Experience />
+        </p>
+      </section>
     </main>
   </body>
 </html>
