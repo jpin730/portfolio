@@ -1,6 +1,6 @@
 import { useEffect, useRef, type JSX } from 'react'
 import { motion } from 'motion/react'
-import { initializeParticleAnimation } from '../utils/initialize-particle-animation'
+import { initializeParticleAnimation } from '../utils/initializeParticleAnimation'
 
 const Hero = (): JSX.Element => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
