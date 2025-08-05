@@ -22,6 +22,7 @@ export default [
     },
     rules: {
       'no-console': 'error',
+      '@typescript-eslint/explicit-function-return-type': 'error',
     },
   },
   prettier,
