@@ -12,9 +12,8 @@ const { company, position, location, dates, description } = Astro.props
 >
   <div class="relative pb-12 md:col-span-2">
     <div class="sticky top-0">
-      <span class="absolute -left-[42px] rounded-full text-5xl text-yellow-400">&bull;</span>
-
-      <h3 class="text-xl font-bold text-yellow-400">{position}</h3>
+      <span class="absolute -left-[42px] rounded-full text-5xl">&bull;</span>
+      <h3 class="text-xl font-bold">{position}</h3>
       <h4 class="text-lg font-semibold text-gray-600 dark:text-white">{company}</h4>
       <p class="m-0 p-0 text-sm text-gray-600/80 dark:text-white/80">{dates}</p>
       <p class="m-0 p-0 text-sm text-gray-600/80 dark:text-white/80">{location}</p>
