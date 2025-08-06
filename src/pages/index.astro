@@ -2,7 +2,9 @@
 import '../styles/global.css'
 import Hero from '../components/Hero.tsx'
 import Experience from '../components/Experience.astro'
-import TitleSection from '../components/TitleSection.astro'
+import Projects from '../components/Projects.astro'
+import Footer from '../components/Footer.astro'
+import Section from '../components/Section.astro'
 ---
 
 <html lang="en">
@@ -12,17 +14,18 @@ import TitleSection from '../components/TitleSection.astro'
     <meta name="viewport" content="width=device-width" />
     <title>Jaime Pineda's Portfolio - Web Developer</title>
   </head>
-  <body>
-    <main class="min-h-dvh bg-black text-white">
+  <body class="bg-black text-white">
+    <main>
       <section>
         <Hero client:load />
       </section>
-      <section class="container mx-auto px-4">
-        <TitleSection> Experience </TitleSection>
-        <p class="mb-8 text-gray-600 dark:text-gray-300">
-          <Experience />
-        </p>
-      </section>
+      <Section title="Experience" class="container mx-auto max-w-5xl p-4">
+        <Experience />
+      </Section>
+      <Section title="Projects" class="container mx-auto max-w-5xl p-4">
+        <Projects />
+      </Section>
     </main>
+    <Footer class="mx-auto max-w-5xl px-4 py-8" />
   </body>
 </html>
