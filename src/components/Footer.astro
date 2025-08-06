@@ -1,0 +1,62 @@
+---
+import { FOOTER_LINKS } from '../consts/footerLinks'
+import AstroIcon from '../icons/AstroIcon.astro'
+
+interface Props {
+  class: string
+}
+
+const { class: className } = Astro.props
+const currentYear = new Date().getFullYear()
+const footerLinks = FOOTER_LINKS
+---
+
+<footer class={className}>
+  <div class="flex flex-col items-center justify-between gap-y-4 text-sm text-gray-400 sm:flex-row">
+    <p class="flex flex-wrap items-center justify-center gap-x-1">
+      <span>{currentYear}</span>
+      <span>&bull;</span>
+      <span>Made with</span>
+      <a
+        role="link"
+        target="_blank"
+        href="https://astro.build"
+        rel="noopener noreferrer"
+        class="flex items-center gap-x-1 transition-colors hover:text-white"
+      >
+        <span>Astro</span>
+        <AstroIcon class="size-4" />
+      </a>
+      <span class="hidden sm:block">&bull;</span>
+      <span class="w-full text-center sm:w-auto">
+        Based on the
+        <a
+          role="link"
+          target="_blank"
+          href="https://github.com/midudev/porfolio.dev"
+          rel="noopener noreferrer"
+          class="transition-colors hover:text-white"
+        >
+          midudev's portfolio
+        </a>
+      </span>
+    </p>
+    <ul class="flex flex-wrap items-center gap-x-4">
+      {
+        footerLinks.map((link) => (
+          <li>
+            <a
+              role="link"
+              target="_blank"
+              href={link.href}
+              class="transition-colors hover:text-white"
+              rel="noopener noreferrer"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</footer>
