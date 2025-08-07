@@ -7,8 +7,9 @@ const experience = EXPERIENCES
 <ol>
   {
     experience.map(({ company, position, location, dates, description }) => (
-      <li class="relative top-0 grid gap-4 pr-8 pb-8 pl-10 before:absolute before:left-3 before:block before:h-full before:border-l-2 before:border-gray-400 before:content-[''] md:grid-cols-5 md:pb-16">
-        <span class="absolute top-0 left-[9px] size-2 rounded-full bg-white text-center text-4xl" />
+      <li class="relative top-0 grid gap-4 pr-8 pb-8 pl-10 md:grid-cols-5 md:pb-16">
+        <span class="absolute left-3 h-full border-l-2 border-gray-400" />
+        <span class="absolute top-0 left-[9px] size-2 rounded-full bg-gray-400 text-center text-4xl" />
         <div class="col-span-2">
           <h3 class="text-xl font-semibold">{position}</h3>
           <h4 class="font-semibold">{company}</h4>
