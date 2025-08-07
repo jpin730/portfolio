@@ -5,6 +5,13 @@ import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
 import Footer from '../components/Footer.astro'
 import Section from '../components/Section.astro'
+
+const title = 'Jaime Pineda - Web Developer'
+const domain = 'jpineda.dev'
+const url = `https://${domain}`
+const image = 'https://github.com/jpin730.png'
+const description =
+  'Web Developer focused on JavaScript and TypeScript, continuously improving my skills in both frontend and backend development to build smooth and efficient web applications. Eager to learn and solve problems, I perform exceptionally well in collaborative environments to deliver high-quality solutions.'
 ---
 
 <html lang="en">
@@ -12,7 +19,25 @@ import Section from '../components/Section.astro'
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <title>Jaime Pineda's Portfolio - Web Developer</title>
+
+    <!-- HTML Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content={domain} />
+    <meta property="twitter:url" content={url} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
   </head>
   <body class="bg-black text-white">
     <main>
