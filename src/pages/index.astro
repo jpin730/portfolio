@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css'
-import Hero from '../components/Hero.tsx'
+import Hero from '../components/Hero.astro'
 import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
 import Footer from '../components/Footer.astro'
@@ -17,7 +17,7 @@ import Section from '../components/Section.astro'
   <body class="bg-black text-white">
     <main>
       <section>
-        <Hero client:load />
+        <Hero />
       </section>
       <Section title="Experience" class="container mx-auto max-w-5xl p-4">
         <Experience />
