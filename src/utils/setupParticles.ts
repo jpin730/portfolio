@@ -1,7 +1,8 @@
+import { PARTICLE_CANVAS_ID } from '../consts/particleCanvasId'
 import { initializeParticleAnimation } from './initializeParticleAnimation'
 
 const setupParticles = (): void => {
-  const canvas = document.getElementById('particle-canvas') as HTMLCanvasElement | null
+  const canvas = document.getElementById(PARTICLE_CANVAS_ID) as HTMLCanvasElement | null
 
   if (!canvas) return
 

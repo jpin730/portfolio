@@ -1,11 +1,13 @@
 ---
 import { CONTACT_LINKS } from '../consts/contactLinks'
+import { PARTICLE_CANVAS_ID } from '../consts/particleCanvasId'
 
 const contactLinks = CONTACT_LINKS
+const canvasId = PARTICLE_CANVAS_ID
 ---
 
 <div class="relative h-dvh w-full overflow-hidden">
-  <canvas id="particle-canvas" class="absolute inset-0 h-full w-full"></canvas>
+  <canvas id={canvasId} class="absolute inset-0 h-full w-full"></canvas>
   <div class="relative z-10 flex h-full flex-col items-center justify-center p-4 text-center">
     <h1 class="mb-4 text-5xl sm:text-7xl">JAIME PINEDA</h1>
     <p class="mb-4 text-lg tracking-widest text-gray-400 sm:text-xl">Web Developer</p>
