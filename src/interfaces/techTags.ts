@@ -1,3 +1,5 @@
+import type { AstroComponent } from '../types/astroComponent'
+
 type TechTagKey =
   | 'angular'
   | 'bootstrap'
@@ -11,8 +13,6 @@ type TechTagKey =
   | 'sass'
   | 'tailwindCss'
   | 'typeOrm'
-
-type AstroComponent = (_props: Record<string, unknown>) => unknown
 
 interface TechTagValue {
   name: string

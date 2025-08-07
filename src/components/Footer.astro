@@ -1,5 +1,5 @@
 ---
-import { FOOTER_LINKS } from '../consts/footerLinks'
+import { CONTACT_LINKS } from '../consts/contactLinks'
 import AstroIcon from '../icons/AstroIcon.astro'
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 
 const { class: className } = Astro.props
 const currentYear = new Date().getFullYear()
-const footerLinks = FOOTER_LINKS
+const contactLinks = CONTACT_LINKS
 ---
 
 <footer class={className}>
@@ -43,7 +43,7 @@ const footerLinks = FOOTER_LINKS
     </p>
     <ul class="flex flex-wrap items-center gap-x-4">
       {
-        footerLinks.map((link) => (
+        contactLinks.map((link) => (
           <li>
             <a
               role="link"

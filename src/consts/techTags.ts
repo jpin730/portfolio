@@ -10,7 +10,7 @@ import PostgreSql from '../icons/PostgreSql.astro'
 import Sass from '../icons/Sass.astro'
 import TailwindCss from '../icons/TailwindCss.astro'
 import TypeOrm from '../icons/TypeOrm.astro'
-import type { TechTags } from '../interfaces/techTags'
+import type { TechTags } from '../interfaces/TechTags'
 
 export const TECH_TAGS: TechTags = {
   angular: {

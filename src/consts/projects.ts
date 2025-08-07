@@ -1,4 +1,4 @@
-import type { Project } from '../interfaces/project'
+import type { Project } from '../interfaces/Project'
 import { TECH_TAGS } from './techTags'
 
 export const PROJECTS: Project[] = [

@@ -1,4 +1,4 @@
-import type { TechTags } from './techTags'
+import type { TechTags } from './TechTags'
 
 export interface Project {
   title: string
