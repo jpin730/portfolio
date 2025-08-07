@@ -21,7 +21,7 @@ export default [
       },
     },
     rules: {
-      'no-console': 'error',
+      'no-console': ['error', { allow: ['warn', 'error'] }],
       '@typescript-eslint/explicit-function-return-type': 'error',
     },
   },
