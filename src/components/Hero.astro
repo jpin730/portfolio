@@ -1,0 +1,29 @@
+---
+import { CONTACT_LINKS } from '../consts/contactLinks'
+
+const contactLinks = CONTACT_LINKS
+---
+
+<div class="relative h-dvh w-full overflow-hidden">
+  <canvas id="particle-canvas" class="absolute inset-0 h-full w-full"></canvas>
+  <div class="relative z-10 flex h-full flex-col items-center justify-center p-4">
+    <h1 class="mb-4 text-5xl sm:text-7xl">JAIME PINEDA</h1>
+    <p class="mb-4 text-lg tracking-widest text-gray-400 sm:text-xl">Web Developer</p>
+    <div class="space-x-2">
+      {
+        contactLinks.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex transform items-center rounded-full border border-gray-600 bg-gradient-to-r from-gray-800 to-black p-2 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105"
+          >
+            <link.icon height="24" width="24" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<script src="../utils/setupParticles.ts"></script>
