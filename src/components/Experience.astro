@@ -1,14 +1,21 @@
 ---
 import { EXPERIENCES } from '../consts/experiences'
-import ExperienceItem from './ExperienceItem.astro'
+
 const experience = EXPERIENCES
 ---
 
-<ol class="relative mt-16">
+<ol>
   {
-    experience.map((experience) => (
-      <li>
-        <ExperienceItem {...experience} />
+    experience.map(({ company, position, location, dates, description }) => (
+      <li class="relative top-0 grid gap-4 pr-8 pb-8 pl-10 before:absolute before:left-3 before:block before:h-full before:border-l-2 before:border-gray-400 before:content-[''] md:grid-cols-5 md:pb-16">
+        <span class="absolute top-0 left-[9px] size-2 rounded-full bg-white text-center text-4xl" />
+        <div class="col-span-2">
+          <h3 class="text-xl font-semibold">{position}</h3>
+          <h4 class="font-semibold">{company}</h4>
+          <p class="text-sm text-gray-400">{dates}</p>
+          <p class="text-sm text-gray-400">{location}</p>
+        </div>
+        <div class="text-gray-400 md:col-span-3">{description}</div>
       </li>
     ))
   }
